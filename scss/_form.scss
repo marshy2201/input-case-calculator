@@ -1,0 +1,29 @@
+﻿form {
+    display: flex;
+
+    input {
+        flex-basis: 65%;
+        padding: 15px 10px;
+        font-size: 1em; 
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;  
+        border: 1px solid #333; 
+        border-right: none;
+    }
+
+    button {
+        flex-basis: 35%;
+        padding: 15px 10px;
+        background-color: $color1;  
+        border: none;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        font-size: 1em;
+        transition: background-color .4s;
+        color: #fff;
+
+        &:hover {
+            background-color: rgba(77, 142, 11, .8);    
+        }
+    }
+}

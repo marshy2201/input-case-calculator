@@ -1,0 +1,16 @@
+﻿section {
+    flex-grow: 1;
+    margin: 90px 0;
+    padding: 0 .5em;
+    width: 100%;
+
+    @media #{$brk-tablet} {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+
+    @media #{$brk-desktop} {
+        max-width: 900px;
+    }
+}

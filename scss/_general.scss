@@ -1,0 +1,28 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background: url('img/logo.png') repeat-x 0 40px / 1200px,
+                url('img/logo.png') repeat-x 0 calc(100% - 40px) / 1200px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;    
+}
+
+button {
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+}
+
+input,
+button {
+    outline: none;
+}

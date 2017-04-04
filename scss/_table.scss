@@ -1,0 +1,101 @@
+﻿table {
+    margin-top: 48px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    border: 1px solid #333;
+    padding: 15px 0;
+    background-color: #eee;
+    width: 33%;
+}
+
+tr {
+
+    td {
+        padding: 10px 0;
+        border: 1px solid #333;
+        text-align: center;
+        font-size: 1em;
+        width: 33%;
+
+        &:first-child {
+            text-align: left;
+            text-transform: capitalize; 
+            padding-left: 10px;
+            padding-right: 10px;
+
+            input {
+                color: #777;
+                border-radius: 0;
+                border-color: #777;
+                width: 90%;
+                font-size: 1em;
+                background: #eee;
+            }
+        }
+
+        input {
+            text-align: center;
+            -moz-appearance: textfield;
+            border-radius: 5px;
+            border: 1px solid #333;
+            padding: 5px 0;
+            font-size: 0.9em;
+            width: 50%;
+        }
+    }
+
+    @media #{$brk-tablet} {
+        > div {
+            display: flex;
+
+            > div {
+                display: flex; 
+                flex-direction: column;
+            }
+        }
+    }
+    
+    div {
+        > div:nth-child(2) button:hover {
+            opacity: .5;
+        }
+
+        &:first-child button:nth-last-of-type(2) {
+            background-color: $color1;
+        }
+
+        &:first-child button:last-of-type {
+            background: #333;
+        }
+
+        &:nth-child(2) button {
+            color: #333;
+        }
+    }
+
+    button {
+        width: 100%;
+        border: none;
+        color: #fff;
+        padding: 5px 0;
+        font-size: .9em;
+        margin: 1px 0 1px 5px;
+
+        @media #{$brk-tablet} {
+            width: 100px;
+        }
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}

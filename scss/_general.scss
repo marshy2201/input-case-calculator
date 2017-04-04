@@ -7,8 +7,8 @@ body {
     font-family: 'Open Sans', sans-serif;
     display: flex;
     flex-direction: column;
-    background: url('img/logo.png') repeat-x 0 40px / 1200px,
-                url('img/logo.png') repeat-x 0 calc(100% - 40px) / 1200px;
+    background: url('../img/logo.png') repeat-x 0 40px / 1200px,
+                url('../img/logo.png') repeat-x 0 calc(100% - 40px) / 1200px;
 }
 
 .wrapper {

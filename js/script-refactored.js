@@ -95,8 +95,8 @@ form.addEventListener('submit', function (e) {
     e.preventDefault();
     if (input.value != '') {
         const tr = createRow(input.value);
-        const lastTR = tBody.querySelector('tr:last-child');
-        tBody.insertBefore(tr, lastTR);
+        const secondTR = tBody.querySelector('tr:nth-child(2)');
+        tBody.insertBefore(tr, secondTR);
 
         input.placeholder = 'Input here...'
         input.value = '';
@@ -176,7 +176,7 @@ tBody.addEventListener('click', function (e) {
             nameActions.down();
         }
 
-        //recalulates the case and time totals afyer click the remove button
+        //recalulates the case and time totals after click the remove button
         caseTotal();
         totalTime();
     }

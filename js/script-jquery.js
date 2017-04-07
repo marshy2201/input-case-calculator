@@ -68,7 +68,7 @@ $form.on('submit', function (e) {
 });
 
 //click events
-$(document).on('click', function (e) {
+$tBody.on('click', function (e) {
     //remove and edit rows
     if ($(e.target).is('button')) {
         const $button = $(e.target);
@@ -130,6 +130,11 @@ $(document).on('click', function (e) {
     //input appears blank on click
     if($(e.target).val() === '0') {
         $(e.target).val('');
+    }
+
+    //remove style on td click
+    if ($(e.target).is('td')) {
+        removeBackground();
     }
 });
 

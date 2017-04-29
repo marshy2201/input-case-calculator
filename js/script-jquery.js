@@ -74,6 +74,7 @@ $tBody.on('click', function (e) {
         const $button = $(e.target);
         const $tr = $button.closest('tr');
         const $td = $tr.children('td:first-child');
+        const $allTd = $tr.children();
 
         //remove background color
         removeBackground();
@@ -88,7 +89,19 @@ $tBody.on('click', function (e) {
 
         const nameActions = {
             remove: function () {
-                $tr.remove();
+                $allTd.animate({
+                    opacity: 0,
+                    height: 0,
+                    padding: 0,
+                    fontSize: 0,
+                    backgroundColor: 'red'
+                }, 800, function () {
+                    $tr.remove();
+
+                    //recalculate after remove button
+                    caseTotal();
+                    totalTime();
+                });   
             },
             edit: function () {
                 const $spanText = $td.children('span').text();
@@ -121,10 +134,6 @@ $tBody.on('click', function (e) {
         } else if ($button.text() === '↓') {
             nameActions.down();
         }
-
-        //recalculate after remove button
-        caseTotal();
-        totalTime();
     }
 
     //input appears blank on click
